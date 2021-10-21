@@ -34,4 +34,7 @@ git cat-file -p dfa1s2da (Is not neccesary to put all the chars) > dogs.txt
 # To put text and create text on the same time
 [Command] echo {content} > {file_name}
 
+# To see the tree of the current commit, the main tree.
+
+[Command] git cat-file -p name_branch^{tree} (literal meaning)
 
