@@ -1,0 +1,21 @@
+# This command allows to store in the more primitive way somethin using git
+[command] echo "what_we_want_to_store" | git hash-object --stdin -w (For write)
+
+# This is how we retrive the content associated with a hash
+[command] git cat-file -p (For print) {Hash}
+
+# We can save the contents of file and retrive it later, as we say. We didn't
+# commit anything yet but it doesn't stop us using this functionalities example:
+
+# dogs.txt This file content some lines. [Hash] dfa1s2das121 (Sha-1, 40 chars)
+# Atos
+# ...
+# ...
+# ...
+
+# If we made some changes and want to retrive the file as the previous state
+# we could do that using the command below
+
+git cat-file -p dfa1s2da (Is not neccesary to put all the chars) > dogs.txt
+
+# And then our file was restored to the previous state.
