@@ -19,3 +19,19 @@
 git cat-file -p dfa1s2da (Is not neccesary to put all the chars) > dogs.txt
 
 # And then our file was restored to the previous state.
+
+# This line of code will return the type of the hash, git use 4 types of 
+# hash-objects, BLOB (Binary large object, just content) TREE, (A more
+# sophisticated structure which store names of file and point a blob to
+# a name, to indentify the content. Also, Tree may point others trees. 
+# COMMIT, this is the most complete of all, it points to a root tree, author
+# parent commit, in other words all the structure and changes of our files.
+
+
+# To check the type
+[Command] git cat-file -t {hash}
+
+# To put text and create text on the same time
+[Command] echo {content} > {file_name}
+
+
