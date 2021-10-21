@@ -2,3 +2,4 @@ Atos
 Titan
 Alias
 Cookie
+Canis
